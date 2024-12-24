@@ -34,6 +34,9 @@
     <ClCompile Include="src\server\redis\redis.cpp">
       <Filter>src\server\redis</Filter>
     </ClCompile>
+    <ClCompile Include="src\client\main.cpp">
+      <Filter>src\client</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="thirdparty">

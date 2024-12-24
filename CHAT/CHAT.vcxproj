@@ -75,6 +75,7 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <ItemGroup>
+    <ClCompile Include="src\client\main.cpp" />
     <ClCompile Include="src\server\chatserver.cpp" />
     <ClCompile Include="src\server\chatservice.cpp" />
     <ClCompile Include="src\server\db\db.cpp" />

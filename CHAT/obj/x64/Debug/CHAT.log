@@ -1,15 +1,17 @@
-﻿生成启动时间为 2024/12/23 16:25:49。
+﻿生成启动时间为 2024/12/24 16:29:19。
 日志记录详细程度设置为: Normal。     1>项目“E:\Code\ChatServer\CHAT\CHAT.vcxproj”在节点 2 上(Build 个目标)。
      1>InitializeBuildStatus:
+         正在创建“E:\Code\ChatServer\CHAT\obj\x64\Debug\CHAT.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
          正在对“E:\Code\ChatServer\CHAT\obj\x64\Debug\CHAT.tlog\unsuccessfulbuild”执行 Touch 任务。
        _ValidateSources:
          正在验证源
        _CopySources:
          正在将源远程复制到“192.168.17.131”
+         正在将文件“E:\Code\ChatServer\CHAT\src\client\main.cpp”复制到“/home/saya/projects/CHAT/src/client/main.cpp”
          正在跳过“E:\Code\ChatServer\CHAT\src\server\chatserver.cpp”，因为它已是最新版本。
          正在跳过“E:\Code\ChatServer\CHAT\src\server\chatservice.cpp”，因为它已是最新版本。
          正在跳过“E:\Code\ChatServer\CHAT\src\server\db\db.cpp”，因为它已是最新版本。
-         正在将文件“E:\Code\ChatServer\CHAT\src\server\main.cpp”复制到“/home/saya/projects/CHAT/src/server/main.cpp”
+         正在跳过“E:\Code\ChatServer\CHAT\src\server\main.cpp”，因为它已是最新版本。
          正在跳过“E:\Code\ChatServer\CHAT\src\server\model\friendmodel.cpp”，因为它已是最新版本。
          正在跳过“E:\Code\ChatServer\CHAT\src\server\model\groupmodel.cpp”，因为它已是最新版本。
          正在跳过“E:\Code\ChatServer\CHAT\src\server\model\offlinemessagemodel.cpp”，因为它已是最新版本。
@@ -36,15 +38,107 @@
          正在跳过“E:\Code\ChatServer\CHAT\src\server\CMakeLists.txt”，因为它已是最新版本。
        _ValidateCompatibleRemoteArchitectures:
          正在验证体系结构
+     1>D:\workSoft\visual studio\IDE\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1119,5): warning MSB8027: 名为 main.cpp 的两个或更多文件将生成到同一位置的输出。这会导致错误的生成结果。   调用的文件是 src\client\main.cpp, src\server\main.cpp。
        _ValidateValidArchitecture:
          正在验证体系结构
          当前项目体系结构“x64”兼容远程系统体系结构“x64”(“x86_64”)。
        ClCompile:
          正在启动远程生成
          正在编译源:
+         g++ -c -x c++ /home/saya/projects/CHAT/src/client/main.cpp -I /home/saya/projects/CHAT/include/server/redis -I /home/saya/projects/CHAT/include/server/model -I /home/saya/projects/CHAT/include -I /home/saya/projects/CHAT/thirdparty -I /home/saya/projects/CHAT/include/server -g2 -gdwarf-2 -o "/home/saya/projects/CHAT/obj/x64/Debug/main.o" -Wall -Wswitch -W"no-deprecated-declarations" -W"empty-body" -Wconversion -W"return-type" -Wparentheses -W"no-format" -Wuninitialized -W"unreachable-code" -W"unused-function" -W"unused-value" -W"unused-variable" -O0 -fno-strict-aliasing -fno-omit-frame-pointer -fthreadsafe-statics -fexceptions -frtti -std=c++11
+         main.cpp
+         /home/saya/projects/CHAT/src/client/main.cpp: In function ‘int main(int, char**)’:
+         /home/saya/projects/CHAT/src/client/main.cpp:65:29: warning: conversion from ‘int’ to ‘uint16_t’ {aka ‘short unsigned int’} may change value [-Wconversion]
+            65 |         uint16_t port = atoi(argv[2]);
+               |                         ~~~~^~~~~~~~~
+         /home/saya/projects/CHAT/src/client/main.cpp:135:39: warning: conversion from ‘ssize_t’ {aka ‘long int’} to ‘int’ may change value [-Wconversion]
+           135 |                         int len = send(clientfd, request.c_str(), strlen(request.c_str()) + 1, 0);
+               |                                   ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+         /home/saya/projects/CHAT/src/client/main.cpp:168:39: warning: conversion from ‘ssize_t’ {aka ‘long int’} to ‘int’ may change value [-Wconversion]
+           168 |                         int len = send(clientfd, request.c_str(), strlen(request.c_str()) + 1, 0);
+               |                                   ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+         /home/saya/projects/CHAT/src/client/main.cpp: In function ‘void readTaskHandler(int)’:
+         /home/saya/projects/CHAT/src/client/main.cpp:305:31: warning: conversion from ‘ssize_t’ {aka ‘long int’} to ‘int’ may change value [-Wconversion]
+           305 |                 int len = recv(clientfd, buffer, 1024, 0);
+               |                           ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+         
+         /home/saya/projects/CHAT/src/client/main.cpp: In function ‘void mainMenu(int)’:
+         /home/saya/projects/CHAT/src/client/main.cpp:428:42: warning: conversion from ‘std::__cxx11::basic_string<char>::size_type’ {aka ‘long unsigned int’} to ‘int’ may change value [-Wconversion]
+           428 |                 int idx = commandbuf.find(":"); //找冒号，找到了返回对应字符的起始下标，找不到返回-1
+               |                           ~~~~~~~~~~~~~~~^~~~~
+         /home/saya/projects/CHAT/src/client/main.cpp: In function ‘void addfriend(int, std::string)’:
+         /home/saya/projects/CHAT/src/client/main.cpp:471:23: warning: conversion from ‘ssize_t’ {aka ‘long int’} to ‘int’ may change value [-Wconversion]
+           471 |         int len = send(clientfd, buffer.c_str(), strlen(buffer.c_str()) + 1, 0);
+               |                   ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+         /home/saya/projects/CHAT/src/client/main.cpp: In function ‘void chat(int, std::string)’:
+         /home/saya/projects/CHAT/src/client/main.cpp:482:27: warning: conversion from ‘std::__cxx11::basic_string<char>::size_type’ {aka ‘long unsigned int’} to ‘int’ may change value [-Wconversion]
+           482 |         int idx = str.find(":");
+               |                   ~~~~~~~~^~~~~
+         /home/saya/projects/CHAT/src/client/main.cpp:501:23: warning: conversion from ‘ssize_t’ {aka ‘long int’} to ‘int’ may change value [-Wconversion]
+           501 |         int len = send(clientfd, buffer.c_str(), strlen(buffer.c_str()) + 1, 0);
+               |                   ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+         /home/saya/projects/CHAT/src/client/main.cpp: In function ‘void creategroup(int, std::string)’:
+         /home/saya/projects/CHAT/src/client/main.cpp:511:27: warning: conversion from ‘std::__cxx11::basic_string<char>::size_type’ {aka ‘long unsigned int’} to ‘int’ may change value [-Wconversion]
+           511 |         int idx = str.find(":");
+               |                   ~~~~~~~~^~~~~
+         /home/saya/projects/CHAT/src/client/main.cpp:534:23: warning: conversion from ‘ssize_t’ {aka ‘long int’} to ‘int’ may change value [-Wconversion]
+           534 |         int len = send(clientfd, buffer.c_str(), strlen(buffer.c_str())+1,0);
+               |                   ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+         /home/saya/projects/CHAT/src/client/main.cpp: In function ‘void addgroup(int, std::string)’:
+         /home/saya/projects/CHAT/src/client/main.cpp:550:23: warning: conversion from ‘ssize_t’ {aka ‘long int’} to ‘int’ may change value [-Wconversion]
+           550 |         int len = send(clientfd, buffer.c_str(), strlen(buffer.c_str()) + 1, 0);
+               |                   ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+         /home/saya/projects/CHAT/src/client/main.cpp: In function ‘void groupchat(int, std::string)’:
+         /home/saya/projects/CHAT/src/client/main.cpp:561:27: warning: conversion from ‘std::__cxx11::basic_string<char>::size_type’ {aka ‘long unsigned int’} to ‘int’ may change value [-Wconversion]
+           561 |         int idx = str.find(":");
+               |                   ~~~~~~~~^~~~~
+         /home/saya/projects/CHAT/src/client/main.cpp:581:23: warning: conversion from ‘ssize_t’ {aka ‘long int’} to ‘int’ may change value [-Wconversion]
+           581 |         int len = send(clientfd, buffer.c_str(), strlen(buffer.c_str()) + 1, 0);
+               |                   ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+         /home/saya/projects/CHAT/src/client/main.cpp: In function ‘void loginout(int, std::string)’:
+         /home/saya/projects/CHAT/src/client/main.cpp:596:23: warning: conversion from ‘ssize_t’ {aka ‘long int’} to ‘int’ may change value [-Wconversion]
+           596 |         int len = send(clientfd, buffer.c_str(), strlen(buffer.c_str()) + 1, 0);
+               |                   ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+         
+     1>E:\Code\ChatServer\CHAT\src\client\main.cpp(65,29): warning : conversion from ‘int’ to ‘uint16_t’ {aka ‘short unsigned int’} may change value [-Wconversion]
+E:\Code\ChatServer\CHAT\src\client\main.cpp(65,29): warning :    65 |         uint16_t port = atoi(argv[2]);
+E:\Code\ChatServer\CHAT\src\client\main.cpp(65,29): warning :       |                         ~~~~^~~~~~~~~
+     1>E:\Code\ChatServer\CHAT\src\client\main.cpp(135,39): warning : conversion from ‘ssize_t’ {aka ‘long int’} to ‘int’ may change value [-Wconversion]
+E:\Code\ChatServer\CHAT\src\client\main.cpp(135,39): warning :   135 |                         int len = send(clientfd, request.c_str(), strlen(request.c_str()) + 1, 0);
+E:\Code\ChatServer\CHAT\src\client\main.cpp(135,39): warning :       |                                   ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     1>E:\Code\ChatServer\CHAT\src\client\main.cpp(168,39): warning : conversion from ‘ssize_t’ {aka ‘long int’} to ‘int’ may change value [-Wconversion]
+E:\Code\ChatServer\CHAT\src\client\main.cpp(168,39): warning :   168 |                         int len = send(clientfd, request.c_str(), strlen(request.c_str()) + 1, 0);
+E:\Code\ChatServer\CHAT\src\client\main.cpp(168,39): warning :       |                                   ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     1>E:\Code\ChatServer\CHAT\src\client\main.cpp(305,31): warning : conversion from ‘ssize_t’ {aka ‘long int’} to ‘int’ may change value [-Wconversion]
+E:\Code\ChatServer\CHAT\src\client\main.cpp(305,31): warning :   305 |                 int len = recv(clientfd, buffer, 1024, 0);
+E:\Code\ChatServer\CHAT\src\client\main.cpp(305,31): warning :       |                           ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+     1>E:\Code\ChatServer\CHAT\src\client\main.cpp(428,42): warning : conversion from ‘std::__cxx11::basic_string<char>::size_type’ {aka ‘long unsigned int’} to ‘int’ may change value [-Wconversion]
+     1>E:\Code\ChatServer\CHAT\src\client\main.cpp(471,23): warning : conversion from ‘ssize_t’ {aka ‘long int’} to ‘int’ may change value [-Wconversion]
+E:\Code\ChatServer\CHAT\src\client\main.cpp(471,23): warning :   471 |         int len = send(clientfd, buffer.c_str(), strlen(buffer.c_str()) + 1, 0);
+E:\Code\ChatServer\CHAT\src\client\main.cpp(471,23): warning :       |                   ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     1>E:\Code\ChatServer\CHAT\src\client\main.cpp(482,27): warning : conversion from ‘std::__cxx11::basic_string<char>::size_type’ {aka ‘long unsigned int’} to ‘int’ may change value [-Wconversion]
+     1>E:\Code\ChatServer\CHAT\src\client\main.cpp(501,23): warning : conversion from ‘ssize_t’ {aka ‘long int’} to ‘int’ may change value [-Wconversion]
+E:\Code\ChatServer\CHAT\src\client\main.cpp(501,23): warning :   501 |         int len = send(clientfd, buffer.c_str(), strlen(buffer.c_str()) + 1, 0);
+E:\Code\ChatServer\CHAT\src\client\main.cpp(501,23): warning :       |                   ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     1>E:\Code\ChatServer\CHAT\src\client\main.cpp(511,27): warning : conversion from ‘std::__cxx11::basic_string<char>::size_type’ {aka ‘long unsigned int’} to ‘int’ may change value [-Wconversion]
+     1>E:\Code\ChatServer\CHAT\src\client\main.cpp(534,23): warning : conversion from ‘ssize_t’ {aka ‘long int’} to ‘int’ may change value [-Wconversion]
+E:\Code\ChatServer\CHAT\src\client\main.cpp(534,23): warning :   534 |         int len = send(clientfd, buffer.c_str(), strlen(buffer.c_str())+1,0);
+E:\Code\ChatServer\CHAT\src\client\main.cpp(534,23): warning :       |                   ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     1>E:\Code\ChatServer\CHAT\src\client\main.cpp(550,23): warning : conversion from ‘ssize_t’ {aka ‘long int’} to ‘int’ may change value [-Wconversion]
+E:\Code\ChatServer\CHAT\src\client\main.cpp(550,23): warning :   550 |         int len = send(clientfd, buffer.c_str(), strlen(buffer.c_str()) + 1, 0);
+E:\Code\ChatServer\CHAT\src\client\main.cpp(550,23): warning :       |                   ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     1>E:\Code\ChatServer\CHAT\src\client\main.cpp(561,27): warning : conversion from ‘std::__cxx11::basic_string<char>::size_type’ {aka ‘long unsigned int’} to ‘int’ may change value [-Wconversion]
+     1>E:\Code\ChatServer\CHAT\src\client\main.cpp(581,23): warning : conversion from ‘ssize_t’ {aka ‘long int’} to ‘int’ may change value [-Wconversion]
+E:\Code\ChatServer\CHAT\src\client\main.cpp(581,23): warning :   581 |         int len = send(clientfd, buffer.c_str(), strlen(buffer.c_str()) + 1, 0);
+E:\Code\ChatServer\CHAT\src\client\main.cpp(581,23): warning :       |                   ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     1>E:\Code\ChatServer\CHAT\src\client\main.cpp(596,23): warning : conversion from ‘ssize_t’ {aka ‘long int’} to ‘int’ may change value [-Wconversion]
+E:\Code\ChatServer\CHAT\src\client\main.cpp(596,23): warning :   596 |         int len = send(clientfd, buffer.c_str(), strlen(buffer.c_str()) + 1, 0);
+E:\Code\ChatServer\CHAT\src\client\main.cpp(596,23): warning :       |                   ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+         已完成编译“/home/saya/projects/CHAT/src/client/main.cpp”
          正在跳过“E:\Code\ChatServer\CHAT\src\server\chatserver.cpp”，因为它已是最新版本。
          正在跳过“E:\Code\ChatServer\CHAT\src\server\chatservice.cpp”，因为它已是最新版本。
          正在跳过“E:\Code\ChatServer\CHAT\src\server\db\db.cpp”，因为它已是最新版本。
+         正在跳过“E:\Code\ChatServer\CHAT\src\server\main.cpp”，因为它已是最新版本。
          正在跳过“E:\Code\ChatServer\CHAT\src\server\model\friendmodel.cpp”，因为它已是最新版本。
          正在跳过“E:\Code\ChatServer\CHAT\src\server\model\groupmodel.cpp”，因为它已是最新版本。
          正在跳过“E:\Code\ChatServer\CHAT\src\server\model\offlinemessagemodel.cpp”，因为它已是最新版本。
@@ -52,38 +146,174 @@
          正在跳过“E:\Code\ChatServer\CHAT\src\server\redis\redis.cpp”，因为它已是最新版本。
          正在跳过“E:\Code\ChatServer\CHAT\test\testjson\testJson.cpp”，因为它已是最新版本。
          正在跳过“E:\Code\ChatServer\CHAT\test\testmuduo\TestMuduo.cpp”，因为它已是最新版本。
-         g++ -c -x c++ /home/saya/projects/CHAT/src/server/main.cpp -I /home/saya/projects/CHAT/include/server/redis -I /home/saya/projects/CHAT/include/server/model -I /home/saya/projects/CHAT/include -I /home/saya/projects/CHAT/thirdparty -I /home/saya/projects/CHAT/include/server -g2 -gdwarf-2 -o "/home/saya/projects/CHAT/obj/x64/Debug/main.o" -Wall -Wswitch -W"no-deprecated-declarations" -W"empty-body" -Wconversion -W"return-type" -Wparentheses -W"no-format" -Wuninitialized -W"unreachable-code" -W"unused-function" -W"unused-value" -W"unused-variable" -O0 -fno-strict-aliasing -fno-omit-frame-pointer -fthreadsafe-statics -fexceptions -frtti -std=c++11
-         main.cpp
-         /home/saya/projects/CHAT/src/server/main.cpp: In function ‘int main(int, char**)’:
-         /home/saya/projects/CHAT/src/server/main.cpp:26:29: warning: conversion from ‘int’ to ‘uint16_t’ {aka ‘short unsigned int’} may change value [-Wconversion]
-            26 |         uint16_t port = atoi(argv[2]);
-               |                         ~~~~^~~~~~~~~
-         
-     1>E:\Code\ChatServer\CHAT\src\server\main.cpp(26,29): warning : conversion from ‘int’ to ‘uint16_t’ {aka ‘short unsigned int’} may change value [-Wconversion]
-E:\Code\ChatServer\CHAT\src\server\main.cpp(26,29): warning :    26 |         uint16_t port = atoi(argv[2]);
-E:\Code\ChatServer\CHAT\src\server\main.cpp(26,29): warning :       |                         ~~~~^~~~~~~~~
-         已完成编译“/home/saya/projects/CHAT/src/server/main.cpp”
        Link:
          正在链接对象
          正在调用“ld”
-         g++ -o "/home/saya/projects/CHAT/bin/x64/Debug/CHAT.out" -Wl,--no-undefined -Wl,-z,relro -Wl,-z,now -Wl,-z,noexecstack -pthread /home/saya/projects/CHAT/obj/x64/Debug/chatserver.o /home/saya/projects/CHAT/obj/x64/Debug/chatservice.o /home/saya/projects/CHAT/obj/x64/Debug/db.o /home/saya/projects/CHAT/obj/x64/Debug/main.o /home/saya/projects/CHAT/obj/x64/Debug/friendmodel.o /home/saya/projects/CHAT/obj/x64/Debug/groupmodel.o /home/saya/projects/CHAT/obj/x64/Debug/offlinemessagemodel.o /home/saya/projects/CHAT/obj/x64/Debug/usermodel.o /home/saya/projects/CHAT/obj/x64/Debug/redis.o /home/saya/projects/CHAT/obj/x64/Debug/testJson.o /home/saya/projects/CHAT/obj/x64/Debug/TestMuduo.o -lmuduo_net -lmuduo_base -lmysqlclient -lhiredis
+         g++ -o "/home/saya/projects/CHAT/bin/x64/Debug/CHAT.out" -Wl,--no-undefined -Wl,-z,relro -Wl,-z,now -Wl,-z,noexecstack -pthread /home/saya/projects/CHAT/obj/x64/Debug/main.o /home/saya/projects/CHAT/obj/x64/Debug/main.o /home/saya/projects/CHAT/obj/x64/Debug/chatserver.o /home/saya/projects/CHAT/obj/x64/Debug/chatservice.o /home/saya/projects/CHAT/obj/x64/Debug/db.o /home/saya/projects/CHAT/obj/x64/Debug/friendmodel.o /home/saya/projects/CHAT/obj/x64/Debug/groupmodel.o /home/saya/projects/CHAT/obj/x64/Debug/offlinemessagemodel.o /home/saya/projects/CHAT/obj/x64/Debug/usermodel.o /home/saya/projects/CHAT/obj/x64/Debug/redis.o /home/saya/projects/CHAT/obj/x64/Debug/testJson.o /home/saya/projects/CHAT/obj/x64/Debug/TestMuduo.o -lmuduo_net -lmuduo_base -lmysqlclient -lhiredis
+     1>/usr/bin/ld : error : /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:26: multiple definition of `g_currentUser'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:26: first defined here
+     1>/usr/bin/ld : error : /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:29: multiple definition of `g_currentUserFriendList'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:29: first defined here
+     1>/usr/bin/ld : error : /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:32: multiple definition of `g_currentUserGroupList'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:32: first defined here
+     1>/usr/bin/ld : error : /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:35: multiple definition of `isMainMenuRunning'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:35: first defined here
+     1>/usr/bin/ld : error : /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:38: multiple definition of `rwsem'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:38: first defined here
+     1>/usr/bin/ld : error : /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:40: multiple definition of `g_isLoginSuccess'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:40: first defined here
+     1>/usr/bin/ld : error : /home/saya/projects/CHAT/obj/x64/Debug/main.o: in function `main':
+     1>E:\Code\ChatServer\CHAT\src\client\main.cpp(56): error : multiple definition of `main'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:56: first defined here
+     1>/usr/bin/ld : error : /home/saya/projects/CHAT/obj/x64/Debug/main.o: in function `readTaskHandler(int)':
+     1>E:\Code\ChatServer\CHAT\src\client\main.cpp(301): error : multiple definition of `readTaskHandler(int)'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:301: first defined here
+     1>/usr/bin/ld : error : /home/saya/projects/CHAT/obj/x64/Debug/main.o: in function `mainMenu(int)':
+     1>E:\Code\ChatServer\CHAT\src\client\main.cpp(419): error : multiple definition of `mainMenu(int)'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:419: first defined here
+     1>/usr/bin/ld : error : /home/saya/projects/CHAT/obj/x64/Debug/main.o: in function `doLoginResponse(nlohmann::basic_json<std::map, std::vector, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, long, unsigned long, double, std::allocator, nlohmann::adl_serializer>&)':
+     1>E:\Code\ChatServer\CHAT\src\client\main.cpp(194): error : multiple definition of `doLoginResponse(nlohmann::basic_json<std::map, std::vector, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, long, unsigned long, double, std::allocator, nlohmann::adl_serializer>&)'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:194: first defined here
+     1>/usr/bin/ld : error : /home/saya/projects/CHAT/obj/x64/Debug/main.o: in function `showCurrentUserData()':
+     1>E:\Code\ChatServer\CHAT\src\client\main.cpp(350): error : multiple definition of `showCurrentUserData()'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:350: first defined here
+     1>/usr/bin/ld : error : /home/saya/projects/CHAT/obj/x64/Debug/main.o: in function `doRegisterResponse(nlohmann::basic_json<std::map, std::vector, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, long, unsigned long, double, std::allocator, nlohmann::adl_serializer>)':
+     1>E:\Code\ChatServer\CHAT\src\client\main.cpp(286): error : multiple definition of `doRegisterResponse(nlohmann::basic_json<std::map, std::vector, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, long, unsigned long, double, std::allocator, nlohmann::adl_serializer>)'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:286: first defined here
+     1>/usr/bin/ld : error : /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:393: multiple definition of `commandMap[abi:cxx11]'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:393: first defined here
+     1>/usr/bin/ld : error : /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:406: multiple definition of `commandHandlerMap[abi:cxx11]'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:406: first defined here
+     1>/usr/bin/ld : error : /home/saya/projects/CHAT/obj/x64/Debug/main.o: in function `help(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)':
+     1>E:\Code\ChatServer\CHAT\src\client\main.cpp(451): error : multiple definition of `help(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:451: first defined here
+     1>/usr/bin/ld : error : /home/saya/projects/CHAT/obj/x64/Debug/main.o: in function `addfriend(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)':
+     1>E:\Code\ChatServer\CHAT\src\client\main.cpp(463): error : multiple definition of `addfriend(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:463: first defined here
+     1>/usr/bin/ld : error : /home/saya/projects/CHAT/obj/x64/Debug/main.o: in function `chat(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)':
+     1>E:\Code\ChatServer\CHAT\src\client\main.cpp(481): error : multiple definition of `chat(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:481: first defined here
+     1>/usr/bin/ld : error : /home/saya/projects/CHAT/obj/x64/Debug/main.o: in function `getCurrentTime[abi:cxx11]()':
+     1>E:\Code\ChatServer\CHAT\src\client\main.cpp(610): error : multiple definition of `getCurrentTime[abi:cxx11]()'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:610: first defined here
+     1>/usr/bin/ld : error : /home/saya/projects/CHAT/obj/x64/Debug/main.o: in function `creategroup(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)':
+     1>E:\Code\ChatServer\CHAT\src\client\main.cpp(510): error : multiple definition of `creategroup(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:510: first defined here
+     1>/usr/bin/ld : error : /home/saya/projects/CHAT/obj/x64/Debug/main.o: in function `addgroup(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)':
+     1>E:\Code\ChatServer\CHAT\src\client\main.cpp(542): error : multiple definition of `addgroup(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:542: first defined here
+     1>/usr/bin/ld : error : /home/saya/projects/CHAT/obj/x64/Debug/main.o: in function `groupchat(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)':
+     1>E:\Code\ChatServer\CHAT\src\client\main.cpp(559): error : multiple definition of `groupchat(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:559: first defined here
+     1>/usr/bin/ld : error : /home/saya/projects/CHAT/obj/x64/Debug/main.o: in function `loginout(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)':
+     1>E:\Code\ChatServer\CHAT\src\client\main.cpp(590): error : multiple definition of `loginout(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:590: first defined here
+     1>collect2 : error : ld returned 1 exit status
+         /usr/bin/ld: /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:26: multiple definition of `g_currentUser'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:26: first defined here
+         /usr/bin/ld: /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:29: multiple definition of `g_currentUserFriendList'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:29: first defined here
+         /usr/bin/ld: /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:32: multiple definition of `g_currentUserGroupList'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:32: first defined here
+         /usr/bin/ld: /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:35: multiple definition of `isMainMenuRunning'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:35: first defined here
+         /usr/bin/ld: /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:38: multiple definition of `rwsem'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:38: first defined here
+         /usr/bin/ld: /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:40: multiple definition of `g_isLoginSuccess'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:40: first defined here
+         /usr/bin/ld: /home/saya/projects/CHAT/obj/x64/Debug/main.o: in function `main':
+         /home/saya/projects/CHAT/src/client/main.cpp:56: multiple definition of `main'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:56: first defined here
+         /usr/bin/ld: /home/saya/projects/CHAT/obj/x64/Debug/main.o: in function `readTaskHandler(int)':
+         /home/saya/projects/CHAT/src/client/main.cpp:301: multiple definition of `readTaskHandler(int)'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:301: first defined here
+         /usr/bin/ld: /home/saya/projects/CHAT/obj/x64/Debug/main.o: in function `mainMenu(int)':
+         /home/saya/projects/CHAT/src/client/main.cpp:419: multiple definition of `mainMenu(int)'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:419: first defined here
+         /usr/bin/ld: /home/saya/projects/CHAT/obj/x64/Debug/main.o: in function `doLoginResponse(nlohmann::basic_json<std::map, std::vector, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, long, unsigned long, double, std::allocator, nlohmann::adl_serializer>&)':
+         /home/saya/projects/CHAT/src/client/main.cpp:194: multiple definition of `doLoginResponse(nlohmann::basic_json<std::map, std::vector, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, long, unsigned long, double, std::allocator, nlohmann::adl_serializer>&)'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:194: first defined here
+         /usr/bin/ld: /home/saya/projects/CHAT/obj/x64/Debug/main.o: in function `showCurrentUserData()':
+         /home/saya/projects/CHAT/src/client/main.cpp:350: multiple definition of `showCurrentUserData()'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:350: first defined here
+         /usr/bin/ld: /home/saya/projects/CHAT/obj/x64/Debug/main.o: in function `doRegisterResponse(nlohmann::basic_json<std::map, std::vector, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, long, unsigned long, double, std::allocator, nlohmann::adl_serializer>)':
+         /home/saya/projects/CHAT/src/client/main.cpp:286: multiple definition of `doRegisterResponse(nlohmann::basic_json<std::map, std::vector, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, long, unsigned long, double, std::allocator, nlohmann::adl_serializer>)'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:286: first defined here
+         /usr/bin/ld: /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:393: multiple definition of `commandMap[abi:cxx11]'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:393: first defined here
+         /usr/bin/ld: /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:406: multiple definition of `commandHandlerMap[abi:cxx11]'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:406: first defined here
+         /usr/bin/ld: /home/saya/projects/CHAT/obj/x64/Debug/main.o: in function `help(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)':
+         /home/saya/projects/CHAT/src/client/main.cpp:451: multiple definition of `help(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:451: first defined here
+         /usr/bin/ld: /home/saya/projects/CHAT/obj/x64/Debug/main.o: in function `addfriend(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)':
+         /home/saya/projects/CHAT/src/client/main.cpp:463: multiple definition of `addfriend(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:463: first defined here
+         /usr/bin/ld: /home/saya/projects/CHAT/obj/x64/Debug/main.o: in function `chat(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)':
+         /home/saya/projects/CHAT/src/client/main.cpp:481: multiple definition of `chat(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:481: first defined here
+         /usr/bin/ld: /home/saya/projects/CHAT/obj/x64/Debug/main.o: in function `getCurrentTime[abi:cxx11]()':
+         /home/saya/projects/CHAT/src/client/main.cpp:610: multiple definition of `getCurrentTime[abi:cxx11]()'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:610: first defined here
+         /usr/bin/ld: /home/saya/projects/CHAT/obj/x64/Debug/main.o: in function `creategroup(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)':
+         /home/saya/projects/CHAT/src/client/main.cpp:510: multiple definition of `creategroup(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:510: first defined here
+         /usr/bin/ld: /home/saya/projects/CHAT/obj/x64/Debug/main.o: in function `addgroup(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)':
+         /home/saya/projects/CHAT/src/client/main.cpp:542: multiple definition of `addgroup(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:542: first defined here
+         /usr/bin/ld: /home/saya/projects/CHAT/obj/x64/Debug/main.o: in function `groupchat(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)':
+         /home/saya/projects/CHAT/src/client/main.cpp:559: multiple definition of `groupchat(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:559: first defined here
+         /usr/bin/ld: /home/saya/projects/CHAT/obj/x64/Debug/main.o: in function `loginout(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)':
+         /home/saya/projects/CHAT/src/client/main.cpp:590: multiple definition of `loginout(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:590: first defined here
+         collect2: error: ld returned 1 exit status
+         
          已完成链接，输出文件名:“/home/saya/projects/CHAT/bin/x64/Debug/CHAT.out”
-         正在将文件“/home/saya/projects/CHAT/bin/x64/Debug/CHAT.out”复制到“E:\Code\ChatServer\CHAT\bin\x64\Debug\CHAT.out”
-         CHAT.vcxproj -> E:\Code\ChatServer\CHAT\bin\x64\Debug\CHAT.out
-       FinalizeBuildStatus:
-         正在删除文件“E:\Code\ChatServer\CHAT\obj\x64\Debug\CHAT.tlog\unsuccessfulbuild”。
-         正在对“E:\Code\ChatServer\CHAT\obj\x64\Debug\CHAT.tlog\CHAT.lastbuildstate”执行 Touch 任务。
-     1>已完成生成项目“E:\Code\ChatServer\CHAT\CHAT.vcxproj”(Build 个目标)的操作。
+     1>已完成生成项目“E:\Code\ChatServer\CHAT\CHAT.vcxproj”(Build 个目标)的操作 - 失败。
 
-已成功生成。
+生成失败。
+
+       “E:\Code\ChatServer\CHAT\CHAT.vcxproj”(Build 目标) (1) ->
+       (WarnCompileDuplicatedFilename 目标) -> 
+         D:\workSoft\visual studio\IDE\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1119,5): warning MSB8027: 名为 main.cpp 的两个或更多文件将生成到同一位置的输出。这会导致错误的生成结果。   调用的文件是 src\client\main.cpp, src\server\main.cpp。
+
 
        “E:\Code\ChatServer\CHAT\CHAT.vcxproj”(Build 目标) (1) ->
        (ClCompile 目标) -> 
-         E:\Code\ChatServer\CHAT\src\server\main.cpp(26,29): warning : conversion from ‘int’ to ‘uint16_t’ {aka ‘short unsigned int’} may change value [-Wconversion]
-       E:\Code\ChatServer\CHAT\src\server\main.cpp(26,29): warning :    26 |         uint16_t port = atoi(argv[2]);
-       E:\Code\ChatServer\CHAT\src\server\main.cpp(26,29): warning :       |                         ~~~~^~~~~~~~~
+         E:\Code\ChatServer\CHAT\src\client\main.cpp(65,29): warning : conversion from ‘int’ to ‘uint16_t’ {aka ‘short unsigned int’} may change value [-Wconversion]
+       E:\Code\ChatServer\CHAT\src\client\main.cpp(65,29): warning :    65 |         uint16_t port = atoi(argv[2]);
+       E:\Code\ChatServer\CHAT\src\client\main.cpp(65,29): warning :       |                         ~~~~^~~~~~~~~
+         E:\Code\ChatServer\CHAT\src\client\main.cpp(135,39): warning : conversion from ‘ssize_t’ {aka ‘long int’} to ‘int’ may change value [-Wconversion]
+       E:\Code\ChatServer\CHAT\src\client\main.cpp(135,39): warning :   135 |                         int len = send(clientfd, request.c_str(), strlen(request.c_str()) + 1, 0);
+       E:\Code\ChatServer\CHAT\src\client\main.cpp(135,39): warning :       |                                   ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+         E:\Code\ChatServer\CHAT\src\client\main.cpp(168,39): warning : conversion from ‘ssize_t’ {aka ‘long int’} to ‘int’ may change value [-Wconversion]
+       E:\Code\ChatServer\CHAT\src\client\main.cpp(168,39): warning :   168 |                         int len = send(clientfd, request.c_str(), strlen(request.c_str()) + 1, 0);
+       E:\Code\ChatServer\CHAT\src\client\main.cpp(168,39): warning :       |                                   ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+         E:\Code\ChatServer\CHAT\src\client\main.cpp(305,31): warning : conversion from ‘ssize_t’ {aka ‘long int’} to ‘int’ may change value [-Wconversion]
+       E:\Code\ChatServer\CHAT\src\client\main.cpp(305,31): warning :   305 |                 int len = recv(clientfd, buffer, 1024, 0);
+       E:\Code\ChatServer\CHAT\src\client\main.cpp(305,31): warning :       |                           ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+         E:\Code\ChatServer\CHAT\src\client\main.cpp(428,42): warning : conversion from ‘std::__cxx11::basic_string<char>::size_type’ {aka ‘long unsigned int’} to ‘int’ may change value [-Wconversion]
+         E:\Code\ChatServer\CHAT\src\client\main.cpp(471,23): warning : conversion from ‘ssize_t’ {aka ‘long int’} to ‘int’ may change value [-Wconversion]
+       E:\Code\ChatServer\CHAT\src\client\main.cpp(471,23): warning :   471 |         int len = send(clientfd, buffer.c_str(), strlen(buffer.c_str()) + 1, 0);
+       E:\Code\ChatServer\CHAT\src\client\main.cpp(471,23): warning :       |                   ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+         E:\Code\ChatServer\CHAT\src\client\main.cpp(482,27): warning : conversion from ‘std::__cxx11::basic_string<char>::size_type’ {aka ‘long unsigned int’} to ‘int’ may change value [-Wconversion]
+         E:\Code\ChatServer\CHAT\src\client\main.cpp(501,23): warning : conversion from ‘ssize_t’ {aka ‘long int’} to ‘int’ may change value [-Wconversion]
+       E:\Code\ChatServer\CHAT\src\client\main.cpp(501,23): warning :   501 |         int len = send(clientfd, buffer.c_str(), strlen(buffer.c_str()) + 1, 0);
+       E:\Code\ChatServer\CHAT\src\client\main.cpp(501,23): warning :       |                   ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+         E:\Code\ChatServer\CHAT\src\client\main.cpp(511,27): warning : conversion from ‘std::__cxx11::basic_string<char>::size_type’ {aka ‘long unsigned int’} to ‘int’ may change value [-Wconversion]
+         E:\Code\ChatServer\CHAT\src\client\main.cpp(534,23): warning : conversion from ‘ssize_t’ {aka ‘long int’} to ‘int’ may change value [-Wconversion]
+       E:\Code\ChatServer\CHAT\src\client\main.cpp(534,23): warning :   534 |         int len = send(clientfd, buffer.c_str(), strlen(buffer.c_str())+1,0);
+       E:\Code\ChatServer\CHAT\src\client\main.cpp(534,23): warning :       |                   ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+         E:\Code\ChatServer\CHAT\src\client\main.cpp(550,23): warning : conversion from ‘ssize_t’ {aka ‘long int’} to ‘int’ may change value [-Wconversion]
+       E:\Code\ChatServer\CHAT\src\client\main.cpp(550,23): warning :   550 |         int len = send(clientfd, buffer.c_str(), strlen(buffer.c_str()) + 1, 0);
+       E:\Code\ChatServer\CHAT\src\client\main.cpp(550,23): warning :       |                   ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+         E:\Code\ChatServer\CHAT\src\client\main.cpp(561,27): warning : conversion from ‘std::__cxx11::basic_string<char>::size_type’ {aka ‘long unsigned int’} to ‘int’ may change value [-Wconversion]
+         E:\Code\ChatServer\CHAT\src\client\main.cpp(581,23): warning : conversion from ‘ssize_t’ {aka ‘long int’} to ‘int’ may change value [-Wconversion]
+       E:\Code\ChatServer\CHAT\src\client\main.cpp(581,23): warning :   581 |         int len = send(clientfd, buffer.c_str(), strlen(buffer.c_str()) + 1, 0);
+       E:\Code\ChatServer\CHAT\src\client\main.cpp(581,23): warning :       |                   ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+         E:\Code\ChatServer\CHAT\src\client\main.cpp(596,23): warning : conversion from ‘ssize_t’ {aka ‘long int’} to ‘int’ may change value [-Wconversion]
+       E:\Code\ChatServer\CHAT\src\client\main.cpp(596,23): warning :   596 |         int len = send(clientfd, buffer.c_str(), strlen(buffer.c_str()) + 1, 0);
+       E:\Code\ChatServer\CHAT\src\client\main.cpp(596,23): warning :       |                   ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    1 个警告
-    0 个错误
 
-已用时间 00:00:01.30
+       “E:\Code\ChatServer\CHAT\CHAT.vcxproj”(Build 目标) (1) ->
+       (Link 目标) -> 
+         /usr/bin/ld : error : /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:26: multiple definition of `g_currentUser'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:26: first defined here
+         /usr/bin/ld : error : /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:29: multiple definition of `g_currentUserFriendList'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:29: first defined here
+         /usr/bin/ld : error : /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:32: multiple definition of `g_currentUserGroupList'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:32: first defined here
+         /usr/bin/ld : error : /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:35: multiple definition of `isMainMenuRunning'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:35: first defined here
+         /usr/bin/ld : error : /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:38: multiple definition of `rwsem'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:38: first defined here
+         /usr/bin/ld : error : /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:40: multiple definition of `g_isLoginSuccess'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:40: first defined here
+         /usr/bin/ld : error : /home/saya/projects/CHAT/obj/x64/Debug/main.o: in function `main':
+         E:\Code\ChatServer\CHAT\src\client\main.cpp(56): error : multiple definition of `main'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:56: first defined here
+         /usr/bin/ld : error : /home/saya/projects/CHAT/obj/x64/Debug/main.o: in function `readTaskHandler(int)':
+         E:\Code\ChatServer\CHAT\src\client\main.cpp(301): error : multiple definition of `readTaskHandler(int)'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:301: first defined here
+         /usr/bin/ld : error : /home/saya/projects/CHAT/obj/x64/Debug/main.o: in function `mainMenu(int)':
+         E:\Code\ChatServer\CHAT\src\client\main.cpp(419): error : multiple definition of `mainMenu(int)'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:419: first defined here
+         /usr/bin/ld : error : /home/saya/projects/CHAT/obj/x64/Debug/main.o: in function `doLoginResponse(nlohmann::basic_json<std::map, std::vector, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, long, unsigned long, double, std::allocator, nlohmann::adl_serializer>&)':
+         E:\Code\ChatServer\CHAT\src\client\main.cpp(194): error : multiple definition of `doLoginResponse(nlohmann::basic_json<std::map, std::vector, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, long, unsigned long, double, std::allocator, nlohmann::adl_serializer>&)'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:194: first defined here
+         /usr/bin/ld : error : /home/saya/projects/CHAT/obj/x64/Debug/main.o: in function `showCurrentUserData()':
+         E:\Code\ChatServer\CHAT\src\client\main.cpp(350): error : multiple definition of `showCurrentUserData()'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:350: first defined here
+         /usr/bin/ld : error : /home/saya/projects/CHAT/obj/x64/Debug/main.o: in function `doRegisterResponse(nlohmann::basic_json<std::map, std::vector, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, long, unsigned long, double, std::allocator, nlohmann::adl_serializer>)':
+         E:\Code\ChatServer\CHAT\src\client\main.cpp(286): error : multiple definition of `doRegisterResponse(nlohmann::basic_json<std::map, std::vector, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, long, unsigned long, double, std::allocator, nlohmann::adl_serializer>)'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:286: first defined here
+         /usr/bin/ld : error : /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:393: multiple definition of `commandMap[abi:cxx11]'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:393: first defined here
+         /usr/bin/ld : error : /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:406: multiple definition of `commandHandlerMap[abi:cxx11]'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:406: first defined here
+         /usr/bin/ld : error : /home/saya/projects/CHAT/obj/x64/Debug/main.o: in function `help(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)':
+         E:\Code\ChatServer\CHAT\src\client\main.cpp(451): error : multiple definition of `help(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:451: first defined here
+         /usr/bin/ld : error : /home/saya/projects/CHAT/obj/x64/Debug/main.o: in function `addfriend(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)':
+         E:\Code\ChatServer\CHAT\src\client\main.cpp(463): error : multiple definition of `addfriend(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:463: first defined here
+         /usr/bin/ld : error : /home/saya/projects/CHAT/obj/x64/Debug/main.o: in function `chat(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)':
+         E:\Code\ChatServer\CHAT\src\client\main.cpp(481): error : multiple definition of `chat(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:481: first defined here
+         /usr/bin/ld : error : /home/saya/projects/CHAT/obj/x64/Debug/main.o: in function `getCurrentTime[abi:cxx11]()':
+         E:\Code\ChatServer\CHAT\src\client\main.cpp(610): error : multiple definition of `getCurrentTime[abi:cxx11]()'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:610: first defined here
+         /usr/bin/ld : error : /home/saya/projects/CHAT/obj/x64/Debug/main.o: in function `creategroup(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)':
+         E:\Code\ChatServer\CHAT\src\client\main.cpp(510): error : multiple definition of `creategroup(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:510: first defined here
+         /usr/bin/ld : error : /home/saya/projects/CHAT/obj/x64/Debug/main.o: in function `addgroup(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)':
+         E:\Code\ChatServer\CHAT\src\client\main.cpp(542): error : multiple definition of `addgroup(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:542: first defined here
+         /usr/bin/ld : error : /home/saya/projects/CHAT/obj/x64/Debug/main.o: in function `groupchat(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)':
+         E:\Code\ChatServer\CHAT\src\client\main.cpp(559): error : multiple definition of `groupchat(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:559: first defined here
+         /usr/bin/ld : error : /home/saya/projects/CHAT/obj/x64/Debug/main.o: in function `loginout(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)':
+         E:\Code\ChatServer\CHAT\src\client\main.cpp(590): error : multiple definition of `loginout(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'; /home/saya/projects/CHAT/obj/x64/Debug/main.o:/home/saya/projects/CHAT/src/client/main.cpp:590: first defined here
+         collect2 : error : ld returned 1 exit status
+
+    15 个警告
+    37 个错误
+
+已用时间 00:00:05.59
