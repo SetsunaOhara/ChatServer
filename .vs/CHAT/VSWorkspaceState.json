@@ -1,0 +1,18 @@
+{
+  "OutputFoldersPerTargetSystem": {
+    "\u672C\u5730\u8BA1\u7B97\u673A": [
+      "CHAT\\out\\build\\x64-debug",
+      "CHAT\\out\\install\\x64-debug",
+      "CHAT\\out\\build\\x64-release",
+      "CHAT\\out\\install\\x64-release",
+      "CHAT\\out\\build\\x86-debug",
+      "CHAT\\out\\install\\x86-debug",
+      "CHAT\\out\\build\\x86-release",
+      "CHAT\\out\\install\\x86-release"
+    ],
+    "192.168.17.131": [
+      "CHAT\\out\\751171918\\build\\linux-debug",
+      "CHAT\\out\\751171918\\install\\linux-debug"
+    ]
+  }
+}

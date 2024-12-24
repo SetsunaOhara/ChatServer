@@ -1,0 +1,13 @@
+E:\Code\ChatServer\CHAT\test\testmuduo\TestMuduo.cpp|638691029629624073|/home/saya/projects/CHAT/||g++ -c -x c++ /home/saya/projects/CHAT/test/testmuduo/TestMuduo.cpp -g2 -gdwarf-2 -o "/home/saya/projects/CHAT/obj/ARM/Debug/TestMuduo.o" -Wall -Wswitch -W"no-deprecated-declarations" -W"empty-body" -Wconversion -W"return-type" -Wparentheses -W"no-format" -Wuninitialized -W"unreachable-code" -W"unused-function" -W"unused-value" -W"unused-variable" -O0 -fno-strict-aliasing -fno-omit-frame-pointer -fthreadsafe-statics -fexceptions -frtti -std=c++11
+E:\Code\ChatServer\CHAT\include\public.hpp|638697058695574541|/home/saya/projects/CHAT/|| 
+E:\Code\ChatServer\CHAT\include\server\chatserver.hpp|638691028961101160|/home/saya/projects/CHAT/|| 
+E:\Code\ChatServer\CHAT\include\server\chatservice.hpp|638699411420934942|/home/saya/projects/CHAT/|| 
+E:\Code\ChatServer\CHAT\include\server\db\db.h|638693528208554510|/home/saya/projects/CHAT/|| 
+E:\Code\ChatServer\CHAT\include\server\model\friendmodel.hpp|638696844310453171|/home/saya/projects/CHAT/|| 
+E:\Code\ChatServer\CHAT\include\server\model\group.hpp|638696953827796968|/home/saya/projects/CHAT/|| 
+E:\Code\ChatServer\CHAT\include\server\model\groupmodel.hpp|638696967138143380|/home/saya/projects/CHAT/|| 
+E:\Code\ChatServer\CHAT\include\server\model\groupuser.hpp|638696962800729717|/home/saya/projects/CHAT/|| 
+E:\Code\ChatServer\CHAT\include\server\model\offlinemessagemodel.hpp|638695311569256632|/home/saya/projects/CHAT/|| 
+E:\Code\ChatServer\CHAT\include\server\model\user.hpp|638696963148586193|/home/saya/projects/CHAT/|| 
+E:\Code\ChatServer\CHAT\include\server\model\usermodel.hpp|638695343890743683|/home/saya/projects/CHAT/|| 
+E:\Code\ChatServer\CHAT\thirdparty\json.hpp|636986224024550406|/home/saya/projects/CHAT/|| 

@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="test\testmuduo\TestMuduo.cpp">
+      <Filter>test\testmuduo</Filter>
+    </ClCompile>
+    <ClCompile Include="src\server\chatserver.cpp">
+      <Filter>src\server</Filter>
+    </ClCompile>
+    <ClCompile Include="src\server\chatservice.cpp">
+      <Filter>src\server</Filter>
+    </ClCompile>
+    <ClCompile Include="test\testjson\testJson.cpp">
+      <Filter>test\testjson</Filter>
+    </ClCompile>
+    <ClCompile Include="src\server\main.cpp">
+      <Filter>src\server</Filter>
+    </ClCompile>
+    <ClCompile Include="src\server\db\db.cpp">
+      <Filter>src\server\db</Filter>
+    </ClCompile>
+    <ClCompile Include="src\server\model\friendmodel.cpp">
+      <Filter>src\server\model</Filter>
+    </ClCompile>
+    <ClCompile Include="src\server\model\groupmodel.cpp">
+      <Filter>src\server\model</Filter>
+    </ClCompile>
+    <ClCompile Include="src\server\model\offlinemessagemodel.cpp">
+      <Filter>src\server\model</Filter>
+    </ClCompile>
+    <ClCompile Include="src\server\model\usermodel.cpp">
+      <Filter>src\server\model</Filter>
+    </ClCompile>
+    <ClCompile Include="src\server\redis\redis.cpp">
+      <Filter>src\server\redis</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="thirdparty">
+      <UniqueIdentifier>{11cbb789-afc4-4959-aca5-06e20ef27097}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{0db8f586-96ec-4498-9429-2619af5235f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\server">
+      <UniqueIdentifier>{7339920f-fdaa-40d2-9fcc-1bd03f67cdb1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\client">
+      <UniqueIdentifier>{9770b4d9-f3fb-428f-98ad-6c6f79c65326}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test">
+      <UniqueIdentifier>{f18ddd50-1189-487e-b0f5-bc3d3b3b3149}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test\testjson">
+      <UniqueIdentifier>{377b372b-694c-4dec-b6f6-1d15f0a42500}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test\testmuduo">
+      <UniqueIdentifier>{3cfb2eb2-72d2-4aac-8e65-dfc8ef37e632}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="build">
+      <UniqueIdentifier>{93bbb1d5-6929-4874-a61e-e299963ca7d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bin">
+      <UniqueIdentifier>{283c77e4-6e44-493f-998f-16bb5a75dab4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{6f9056ac-00c7-47cf-8344-2c0623b5b6d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\server">
+      <UniqueIdentifier>{16846f83-6722-477b-bdbc-720d54b1d8ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\server\db">
+      <UniqueIdentifier>{7a66c084-07d4-4ee3-9d74-b5ca315f9f4a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\server\db">
+      <UniqueIdentifier>{3ad780bd-fe11-45e9-96d8-74c26b0793ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\server\model">
+      <UniqueIdentifier>{5ae69fc7-8cb1-4013-a3cd-030de4d6a982}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\model">
+      <UniqueIdentifier>{5940bc49-6248-4d50-b873-3eb9b1fed6b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\server\model">
+      <UniqueIdentifier>{85c7d766-ba05-479d-909d-8a6ff4fb6d5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\server\redis">
+      <UniqueIdentifier>{bbf65ef1-3ec7-4ae2-81a0-5b6ebf747b02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\server\redis">
+      <UniqueIdentifier>{0e46011e-f62e-4cc1-8845-91555ac5ed88}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="thirdparty\json.hpp">
+      <Filter>thirdparty</Filter>
+    </ClInclude>
+    <ClInclude Include="include\server\chatserver.hpp">
+      <Filter>include\server</Filter>
+    </ClInclude>
+    <ClInclude Include="include\server\chatservice.hpp">
+      <Filter>include\server</Filter>
+    </ClInclude>
+    <ClInclude Include="include\public.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\server\db\db.h">
+      <Filter>include\server\db</Filter>
+    </ClInclude>
+    <ClInclude Include="include\server\model\friendmodel.hpp">
+      <Filter>include\server\model</Filter>
+    </ClInclude>
+    <ClInclude Include="include\server\model\group.hpp">
+      <Filter>include\server\model</Filter>
+    </ClInclude>
+    <ClInclude Include="include\server\model\groupmodel.hpp">
+      <Filter>include\server\model</Filter>
+    </ClInclude>
+    <ClInclude Include="include\server\model\groupuser.hpp">
+      <Filter>include\server\model</Filter>
+    </ClInclude>
+    <ClInclude Include="include\server\model\offlinemessagemodel.hpp">
+      <Filter>include\server\model</Filter>
+    </ClInclude>
+    <ClInclude Include="include\server\model\user.hpp">
+      <Filter>include\server\model</Filter>
+    </ClInclude>
+    <ClInclude Include="include\server\model\usermodel.hpp">
+      <Filter>include\server\model</Filter>
+    </ClInclude>
+    <ClInclude Include="include\server\redis\redis.hpp">
+      <Filter>include\server\redis</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="src\CMakeLists.txt">
+      <Filter>src</Filter>
+    </Text>
+    <Text Include="src\server\CMakeLists.txt">
+      <Filter>src\server</Filter>
+    </Text>
+    <Text Include="CMakeLists.txt" />
+    <Text Include="src\client\CMakeLists.txt">
+      <Filter>src\client</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,14 @@
+{
+  "ActiveTargetSystem": "192.168.17.131",
+  "DevContainersInfoBarHidden": true,
+  "MRUPresetsPerTargetSystem": {
+    "\u672C\u5730\u8BA1\u7B97\u673A": {
+      "configure": "x64-debug"
+    }
+  },
+  "ExpandedNodes": [
+    ""
+  ],
+  "SelectedNode": "\\ChatServer.sln",
+  "PreviewInSolutionExplorer": false
+}

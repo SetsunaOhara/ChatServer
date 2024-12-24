@@ -1,0 +1,10 @@
+E:/Code/ChatServer/CHAT/out/build/x64-debug/CMakeFiles/edit_cache.dir
+E:/Code/ChatServer/CHAT/out/build/x64-debug/CMakeFiles/rebuild_cache.dir
+E:/Code/ChatServer/CHAT/out/build/x64-debug/src/CMakeFiles/edit_cache.dir
+E:/Code/ChatServer/CHAT/out/build/x64-debug/src/CMakeFiles/rebuild_cache.dir
+E:/Code/ChatServer/CHAT/out/build/x64-debug/src/server/CMakeFiles/ChatServer.dir
+E:/Code/ChatServer/CHAT/out/build/x64-debug/src/server/CMakeFiles/edit_cache.dir
+E:/Code/ChatServer/CHAT/out/build/x64-debug/src/server/CMakeFiles/rebuild_cache.dir
+E:/Code/ChatServer/CHAT/out/build/x64-debug/src/client/CMakeFiles/ChatClient.dir
+E:/Code/ChatServer/CHAT/out/build/x64-debug/src/client/CMakeFiles/edit_cache.dir
+E:/Code/ChatServer/CHAT/out/build/x64-debug/src/client/CMakeFiles/rebuild_cache.dir

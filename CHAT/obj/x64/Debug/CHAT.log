@@ -1,0 +1,89 @@
+﻿生成启动时间为 2024/12/23 16:25:49。
+日志记录详细程度设置为: Normal。     1>项目“E:\Code\ChatServer\CHAT\CHAT.vcxproj”在节点 2 上(Build 个目标)。
+     1>InitializeBuildStatus:
+         正在对“E:\Code\ChatServer\CHAT\obj\x64\Debug\CHAT.tlog\unsuccessfulbuild”执行 Touch 任务。
+       _ValidateSources:
+         正在验证源
+       _CopySources:
+         正在将源远程复制到“192.168.17.131”
+         正在跳过“E:\Code\ChatServer\CHAT\src\server\chatserver.cpp”，因为它已是最新版本。
+         正在跳过“E:\Code\ChatServer\CHAT\src\server\chatservice.cpp”，因为它已是最新版本。
+         正在跳过“E:\Code\ChatServer\CHAT\src\server\db\db.cpp”，因为它已是最新版本。
+         正在将文件“E:\Code\ChatServer\CHAT\src\server\main.cpp”复制到“/home/saya/projects/CHAT/src/server/main.cpp”
+         正在跳过“E:\Code\ChatServer\CHAT\src\server\model\friendmodel.cpp”，因为它已是最新版本。
+         正在跳过“E:\Code\ChatServer\CHAT\src\server\model\groupmodel.cpp”，因为它已是最新版本。
+         正在跳过“E:\Code\ChatServer\CHAT\src\server\model\offlinemessagemodel.cpp”，因为它已是最新版本。
+         正在跳过“E:\Code\ChatServer\CHAT\src\server\model\usermodel.cpp”，因为它已是最新版本。
+         正在跳过“E:\Code\ChatServer\CHAT\src\server\redis\redis.cpp”，因为它已是最新版本。
+         正在跳过“E:\Code\ChatServer\CHAT\test\testjson\testJson.cpp”，因为它已是最新版本。
+         正在跳过“E:\Code\ChatServer\CHAT\test\testmuduo\TestMuduo.cpp”，因为它已是最新版本。
+         正在跳过“E:\Code\ChatServer\CHAT\include\public.hpp”，因为它已是最新版本。
+         正在跳过“E:\Code\ChatServer\CHAT\include\server\chatserver.hpp”，因为它已是最新版本。
+         正在跳过“E:\Code\ChatServer\CHAT\include\server\chatservice.hpp”，因为它已是最新版本。
+         正在跳过“E:\Code\ChatServer\CHAT\include\server\db\db.h”，因为它已是最新版本。
+         正在跳过“E:\Code\ChatServer\CHAT\include\server\model\friendmodel.hpp”，因为它已是最新版本。
+         正在跳过“E:\Code\ChatServer\CHAT\include\server\model\group.hpp”，因为它已是最新版本。
+         正在跳过“E:\Code\ChatServer\CHAT\include\server\model\groupmodel.hpp”，因为它已是最新版本。
+         正在跳过“E:\Code\ChatServer\CHAT\include\server\model\groupuser.hpp”，因为它已是最新版本。
+         正在跳过“E:\Code\ChatServer\CHAT\include\server\model\offlinemessagemodel.hpp”，因为它已是最新版本。
+         正在跳过“E:\Code\ChatServer\CHAT\include\server\model\user.hpp”，因为它已是最新版本。
+         正在跳过“E:\Code\ChatServer\CHAT\include\server\model\usermodel.hpp”，因为它已是最新版本。
+         正在跳过“E:\Code\ChatServer\CHAT\include\server\redis\redis.hpp”，因为它已是最新版本。
+         正在跳过“E:\Code\ChatServer\CHAT\thirdparty\json.hpp”，因为它已是最新版本。
+         正在跳过“E:\Code\ChatServer\CHAT\CMakeLists.txt”，因为它已是最新版本。
+         正在跳过“E:\Code\ChatServer\CHAT\src\client\CMakeLists.txt”，因为它已是最新版本。
+         正在跳过“E:\Code\ChatServer\CHAT\src\CMakeLists.txt”，因为它已是最新版本。
+         正在跳过“E:\Code\ChatServer\CHAT\src\server\CMakeLists.txt”，因为它已是最新版本。
+       _ValidateCompatibleRemoteArchitectures:
+         正在验证体系结构
+       _ValidateValidArchitecture:
+         正在验证体系结构
+         当前项目体系结构“x64”兼容远程系统体系结构“x64”(“x86_64”)。
+       ClCompile:
+         正在启动远程生成
+         正在编译源:
+         正在跳过“E:\Code\ChatServer\CHAT\src\server\chatserver.cpp”，因为它已是最新版本。
+         正在跳过“E:\Code\ChatServer\CHAT\src\server\chatservice.cpp”，因为它已是最新版本。
+         正在跳过“E:\Code\ChatServer\CHAT\src\server\db\db.cpp”，因为它已是最新版本。
+         正在跳过“E:\Code\ChatServer\CHAT\src\server\model\friendmodel.cpp”，因为它已是最新版本。
+         正在跳过“E:\Code\ChatServer\CHAT\src\server\model\groupmodel.cpp”，因为它已是最新版本。
+         正在跳过“E:\Code\ChatServer\CHAT\src\server\model\offlinemessagemodel.cpp”，因为它已是最新版本。
+         正在跳过“E:\Code\ChatServer\CHAT\src\server\model\usermodel.cpp”，因为它已是最新版本。
+         正在跳过“E:\Code\ChatServer\CHAT\src\server\redis\redis.cpp”，因为它已是最新版本。
+         正在跳过“E:\Code\ChatServer\CHAT\test\testjson\testJson.cpp”，因为它已是最新版本。
+         正在跳过“E:\Code\ChatServer\CHAT\test\testmuduo\TestMuduo.cpp”，因为它已是最新版本。
+         g++ -c -x c++ /home/saya/projects/CHAT/src/server/main.cpp -I /home/saya/projects/CHAT/include/server/redis -I /home/saya/projects/CHAT/include/server/model -I /home/saya/projects/CHAT/include -I /home/saya/projects/CHAT/thirdparty -I /home/saya/projects/CHAT/include/server -g2 -gdwarf-2 -o "/home/saya/projects/CHAT/obj/x64/Debug/main.o" -Wall -Wswitch -W"no-deprecated-declarations" -W"empty-body" -Wconversion -W"return-type" -Wparentheses -W"no-format" -Wuninitialized -W"unreachable-code" -W"unused-function" -W"unused-value" -W"unused-variable" -O0 -fno-strict-aliasing -fno-omit-frame-pointer -fthreadsafe-statics -fexceptions -frtti -std=c++11
+         main.cpp
+         /home/saya/projects/CHAT/src/server/main.cpp: In function ‘int main(int, char**)’:
+         /home/saya/projects/CHAT/src/server/main.cpp:26:29: warning: conversion from ‘int’ to ‘uint16_t’ {aka ‘short unsigned int’} may change value [-Wconversion]
+            26 |         uint16_t port = atoi(argv[2]);
+               |                         ~~~~^~~~~~~~~
+         
+     1>E:\Code\ChatServer\CHAT\src\server\main.cpp(26,29): warning : conversion from ‘int’ to ‘uint16_t’ {aka ‘short unsigned int’} may change value [-Wconversion]
+E:\Code\ChatServer\CHAT\src\server\main.cpp(26,29): warning :    26 |         uint16_t port = atoi(argv[2]);
+E:\Code\ChatServer\CHAT\src\server\main.cpp(26,29): warning :       |                         ~~~~^~~~~~~~~
+         已完成编译“/home/saya/projects/CHAT/src/server/main.cpp”
+       Link:
+         正在链接对象
+         正在调用“ld”
+         g++ -o "/home/saya/projects/CHAT/bin/x64/Debug/CHAT.out" -Wl,--no-undefined -Wl,-z,relro -Wl,-z,now -Wl,-z,noexecstack -pthread /home/saya/projects/CHAT/obj/x64/Debug/chatserver.o /home/saya/projects/CHAT/obj/x64/Debug/chatservice.o /home/saya/projects/CHAT/obj/x64/Debug/db.o /home/saya/projects/CHAT/obj/x64/Debug/main.o /home/saya/projects/CHAT/obj/x64/Debug/friendmodel.o /home/saya/projects/CHAT/obj/x64/Debug/groupmodel.o /home/saya/projects/CHAT/obj/x64/Debug/offlinemessagemodel.o /home/saya/projects/CHAT/obj/x64/Debug/usermodel.o /home/saya/projects/CHAT/obj/x64/Debug/redis.o /home/saya/projects/CHAT/obj/x64/Debug/testJson.o /home/saya/projects/CHAT/obj/x64/Debug/TestMuduo.o -lmuduo_net -lmuduo_base -lmysqlclient -lhiredis
+         已完成链接，输出文件名:“/home/saya/projects/CHAT/bin/x64/Debug/CHAT.out”
+         正在将文件“/home/saya/projects/CHAT/bin/x64/Debug/CHAT.out”复制到“E:\Code\ChatServer\CHAT\bin\x64\Debug\CHAT.out”
+         CHAT.vcxproj -> E:\Code\ChatServer\CHAT\bin\x64\Debug\CHAT.out
+       FinalizeBuildStatus:
+         正在删除文件“E:\Code\ChatServer\CHAT\obj\x64\Debug\CHAT.tlog\unsuccessfulbuild”。
+         正在对“E:\Code\ChatServer\CHAT\obj\x64\Debug\CHAT.tlog\CHAT.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“E:\Code\ChatServer\CHAT\CHAT.vcxproj”(Build 个目标)的操作。
+
+已成功生成。
+
+       “E:\Code\ChatServer\CHAT\CHAT.vcxproj”(Build 目标) (1) ->
+       (ClCompile 目标) -> 
+         E:\Code\ChatServer\CHAT\src\server\main.cpp(26,29): warning : conversion from ‘int’ to ‘uint16_t’ {aka ‘short unsigned int’} may change value [-Wconversion]
+       E:\Code\ChatServer\CHAT\src\server\main.cpp(26,29): warning :    26 |         uint16_t port = atoi(argv[2]);
+       E:\Code\ChatServer\CHAT\src\server\main.cpp(26,29): warning :       |                         ~~~~^~~~~~~~~
+
+    1 个警告
+    0 个错误
+
+已用时间 00:00:01.30
